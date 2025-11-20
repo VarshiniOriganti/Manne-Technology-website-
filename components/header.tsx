@@ -12,10 +12,11 @@ export function Header() {
   const isActive = (path: string) => pathname === path
 
   const navItems = [
+    { label: "HOME", href: "/" },
     { label: "WHO WE ARE", href: "/who-we-are" },
     { label: "WHAT WE DO", href: "/what-we-do" },
     { label: "WHAT WE DID", href: "/what-we-did" },
-    { label: "WHERE WE ARE", href: "/where-we-are" },
+    { label: "WHERE WE ARE", href: "/where-we-are" }
   ]
 
   return (
