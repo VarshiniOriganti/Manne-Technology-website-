@@ -1,0 +1,135 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Light Theme - Lavender & White */
+  --background: 255 100% 100%; /* Pure White */
+  --foreground: 250 20% 15%; /* Dark Navy Blue (almost black) */
+  --card: 255 100% 100%; /* White */
+  --card-foreground: 250 20% 15%; /* Dark Navy Blue */
+  --popover: 255 100% 100%; /* White */
+  --popover-foreground: 250 20% 15%; /* Dark Navy Blue */
+  --primary: 250 80% 60%; /* Vibrant Lavender */
+  --primary-foreground: 255 100% 100%; /* White */
+  --secondary: 250 30% 95%; /* Very Light Lavender */
+  --secondary-foreground: 250 50% 30%; /* Dark Lavender */
+  --muted: 250 20% 98%; /* Off-White with hint of Lavender */
+  --muted-foreground: 250 10% 46%;
+  --accent: 250 40% 97%; /* Slightly off-white with lavender tint */
+  --accent-foreground: 250 50% 40%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 255 100% 100%;
+  --border: 250 20% 90%;
+  --input: 250 20% 95%;
+  --ring: 250 80% 60%;
+  --radius: 0.5rem;
+  
+  /* Chart Colors */
+  --chart-1: 250 80% 60%; /* Primary Lavender */
+  --chart-2: 250 60% 75%; /* Light Lavender */
+  --chart-3: 250 40% 85%; /* Very Light Lavender */
+  --chart-4: 250 90% 50%; /* Deep Lavender */
+  --chart-5: 250 30% 90%; /* Pale Lavender */
+  
+  /* Sidebar */
+  --sidebar: 255 100% 100%; /* White */
+  --sidebar-foreground: 250 20% 15%; /* Dark Navy Blue */
+  --sidebar-primary: 250 80% 60%; /* Vibrant Lavender */
+  --sidebar-primary-foreground: 255 100% 100%; /* White */
+  --sidebar-accent: 250 30% 95%; /* Very Light Lavender */
+  --sidebar-accent-foreground: 250 50% 30%; /* Dark Lavender */
+  --sidebar-border: 250 20% 90%;
+  --sidebar-ring: 250 80% 60%;
+}
+
+.dark {
+  /* Dark Theme - Deep Purple & Lavender */
+  --background: 250 30% 10%; /* Deep Navy */
+  --foreground: 250 50% 95%; /* Off-White with Lavender tint */
+  --card: 250 30% 12%; /* Slightly lighter than background */
+  --card-foreground: 250 50% 95%; 
+  --popover: 250 30% 10%;
+  --popover-foreground: 250 50% 95%;
+  --primary: 250 80% 70%; /* Brighter Lavender */
+  --primary-foreground: 250 30% 10%; /* Dark Navy */
+  --secondary: 250 30% 20%; /* Dark Lavender */
+  --secondary-foreground: 250 50% 95%;
+  --muted: 250 30% 25%; 
+  --muted-foreground: 250 20% 70%;
+  --accent: 250 30% 25%;
+  --accent-foreground: 250 50% 95%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 255 100% 100%;
+  --border: 250 30% 30%;
+  --input: 250 30% 25%;
+  --ring: 250 80% 70%;
+  
+  /* Dark Theme Chart Colors */
+  --chart-1: 250 80% 70%; /* Bright Lavender */
+  --chart-2: 250 60% 60%; /* Medium Lavender */
+  --chart-3: 250 40% 50%; /* Deep Lavender */
+  --chart-4: 250 80% 80%; /* Pastel Lavender */
+  --chart-5: 250 30% 40%; /* Muted Lavender */
+  
+  /* Dark Theme Sidebar */
+  --sidebar: 250 30% 12%;
+  --sidebar-foreground: 250 50% 95%;
+  --sidebar-primary: 250 80% 70%;
+  --sidebar-primary-foreground: 250 30% 10%;
+  --sidebar-accent: 250 30% 25%;
+  --sidebar-accent-foreground: 250 50% 95%;
+  --sidebar-border: 250 30% 30%;
+  --sidebar-ring: 250 80% 70%;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
