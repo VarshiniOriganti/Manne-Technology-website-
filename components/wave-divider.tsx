@@ -8,7 +8,7 @@ export function WaveDivider() {
       >
         <path
           d="M0,50 Q300,10 600,50 T1200,50 L1200,120 L0,120 Z"
-          fill="currentColor"
+          fill="#3a2a1e"
         ></path>
       </svg>
     </div>
