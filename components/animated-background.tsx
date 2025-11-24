@@ -6,9 +6,10 @@ import Image from 'next/image';
 interface AnimatedBackgroundProps {
   imageUrl: string;
   speed?: number;
+  className?: string;
 }
 
-export function AnimatedBackground({ imageUrl, speed = 1 }: AnimatedBackgroundProps) {
+export function AnimatedBackground({ imageUrl, speed = 1, className = '' }: AnimatedBackgroundProps) {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const position = useRef<number>(0);
   const animationFrameId = useRef<number | null>(null);
@@ -38,7 +39,7 @@ export function AnimatedBackground({ imageUrl, speed = 1 }: AnimatedBackgroundPr
   return (
     <div 
       ref={backgroundRef}
-      className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
+      className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0 ${className}`}
       style={{
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: '120% auto',

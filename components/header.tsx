@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Search } from "lucide-react"
+import { AnimatedBackground } from "./animated-background"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,32 +21,33 @@ export function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-orange-100 text-foreground border-b border-border/40">
+    <header className="sticky top-0 z-50 text-white relative overflow-hidden">
+      <AnimatedBackground 
+        imageUrl="/background%20image.jpg" 
+        speed={0.5} 
+      />
       {/* Top Bar */}
-      <div className="bg-secondary/30 px-6 py-2 text-sm">
+      <div className="bg-black/80 px-6 py-2 text-sm relative z-10">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex gap-6 text-black">
-            <a href="tel:+919666966132" className="hover:text-accent transition-colors">
+          <div className="flex gap-6 text-white/90">
+            <a href="tel:+919666966132" className="text-white/90 hover:text-white transition-colors">
               📞 +91-9666-966-132
             </a>
-            <a href="mailto:info@manne.co.in" className="hover:text-accent transition-colors">
+            <a href="mailto:info@manne.co.in" className="text-white/90 hover:text-white transition-colors">
               ✉️ info@manne.co.in
             </a>
           </div>
         </div>
       </div>
 
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 relative z-10">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity animate-fade-in">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-bold text-primary-foreground text-lg">
-              M
-            </div>
-            <div>
-              <h1 className="text-foreground font-bold text-lg">MANNE</h1>
-              <p className="text-foreground/80 text-xs font-medium">TECHNOLOGIES</p>
-            </div>
+            <img 
+              src="/manne.logo.png"   
+              className="h-12 w-auto" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,7 +57,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={`text-sm font-medium transition-colors duration-300 ${
-                  isActive(item.href) ? "text-primary border-b-2 border-primary pb-1 font-semibold" : "text-foreground/80 hover:text-primary"
+                  isActive(item.href) ? "text-primary border-b-2 border-primary pb-1 font-semibold" : "text-white hover:text-primary"
                 }`}
               >
                 {item.label}

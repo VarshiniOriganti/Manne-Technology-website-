@@ -33,8 +33,16 @@ export default function WhereWeAre() {
     <>
       <Header />
 
-      <section className="bg-white pt-20 pb-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative pt-20 pb-20 overflow-hidden">
+        {/* Dynamic Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-100/60 via-orange-100/40 to-yellow-100/30">
+          {/* Floating Orbs */}
+          <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-amber-300/30 to-orange-300/30 rounded-full blur-3xl" style={{ animation: 'float 10s ease-in-out infinite' }}></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-tr from-yellow-300/20 to-amber-300/20 rounded-full blur-3xl" style={{ animation: 'float 12s ease-in-out infinite', animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-gradient-to-br from-orange-300/25 to-yellow-300/25 rounded-full blur-3xl" style={{ animation: 'float 14s ease-in-out infinite', animationDelay: '4s' }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <ScrollReveal>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Where <span className="text-accent">We Are</span>
@@ -44,14 +52,32 @@ export default function WhereWeAre() {
             </p>
           </ScrollReveal>
         </div>
+
+        {/* Add float animation */}
+        <style jsx>{`
+          @keyframes float {
+            0%, 100% {
+              transform: translateY(0) scale(1);
+            }
+            50% {
+              transform: translateY(-30px) scale(1.05);
+            }
+          }
+        `}</style>
       </section>
 
       <div className="relative z-30">
         <WaveDivider />
       </div>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative py-20 overflow-hidden">
+        {/* Dynamic Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-amber-50/30 to-orange-50/20">
+          <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-amber-200/20 to-orange-200/20 rounded-full blur-3xl" style={{ animation: 'float 11s ease-in-out infinite' }}></div>
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tr from-yellow-200/15 to-amber-200/15 rounded-full blur-3xl" style={{ animation: 'float 13s ease-in-out infinite', animationDelay: '2.5s' }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-8 text-gray-900">Our Office</h2>
