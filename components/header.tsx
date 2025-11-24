@@ -22,9 +22,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 text-white relative overflow-hidden">
-      <AnimatedBackground 
-        imageUrl="/background%20image.jpg" 
-        speed={0.5} 
+      <AnimatedBackground
+        imageUrl="/background%20image.jpg"
+        speed={0.5}
       />
       {/* Top Bar */}
       <div className="bg-black/80 px-6 py-2 text-sm relative z-10">
@@ -44,9 +44,10 @@ export function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity animate-fade-in">
-            <img 
-              src="/manne.logo.png"   
-              className="h-12 w-auto" 
+            <img
+              src="/manne.logo.png"
+              alt="Manne Tech Logo"
+              className="h-12 w-auto"
             />
           </Link>
 
@@ -56,9 +57,8 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium transition-colors duration-300 ${
-                  isActive(item.href) ? "text-primary border-b-2 border-primary pb-1 font-semibold" : "text-white hover:text-primary"
-                }`}
+                className={`text-sm font-medium transition-colors duration-300 ${isActive(item.href) ? "text-primary border-b-2 border-primary pb-1 font-semibold" : "text-white hover:text-primary"
+                  }`}
               >
                 {item.label}
               </Link>
@@ -67,7 +67,7 @@ export function Header() {
 
           {/* Search Icon */}
           <button className="p-2 hover:bg-accent rounded-lg transition-colors">
-            <Search size={20} className="text-foreground" />
+            <Search size={20} className="text-white" />
           </button>
         </div>
       </div>

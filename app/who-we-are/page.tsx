@@ -333,7 +333,7 @@ export default function WhoWeAre() {
                         <img
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
-                          className="relative w-16 h-16 rounded-full object-cover border-3 border-white shadow-lg"
+                          className="relative w-16 h-16 rounded-full object-cover border-[3px] border-white shadow-lg"
                         />
                       </div>
                       <div>
