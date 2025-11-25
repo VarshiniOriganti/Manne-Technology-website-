@@ -324,7 +324,7 @@ export default function WhoWeAre() {
                   {/* Card Content */}
                   <div className="relative h-full bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500">
                     {/* Quote Icon */}
-                    <div className="absolute top-6 right-6 text-6xl text-amber-200/40 leading-none">"</div>
+                    <div className="absolute top-6 right-6 text-6xl text-amber-200/40 leading-none">&quot;</div>
 
                     <div className="flex items-center gap-4 mb-6 relative z-10">
                       <div className="relative">
@@ -344,7 +344,7 @@ export default function WhoWeAre() {
                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-lg mb-6 relative z-10">
-                      "{testimonial.testimonial}"
+                      &quot;{testimonial.testimonial}&quot;
                     </p>
 
                     {/* Star Rating */}
