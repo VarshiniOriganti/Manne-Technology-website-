@@ -289,7 +289,6 @@ export default function WhoWeAre() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Testimonials</span>
               </h2>
-              <div className="h-1.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full w-24 mx-auto mb-6" />
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 What our satisfied clients have to say about working with us
               </p>
