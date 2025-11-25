@@ -329,9 +329,11 @@ export default function WhoWeAre() {
                     <div className="flex items-center gap-4 mb-6 relative z-10">
                       <div className="relative">
                         <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full blur opacity-40" />
-                        <img
+                        <Image
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
+                          width={64}
+                          height={64}
                           className="relative w-16 h-16 rounded-full object-cover border-[3px] border-white shadow-lg"
                         />
                       </div>

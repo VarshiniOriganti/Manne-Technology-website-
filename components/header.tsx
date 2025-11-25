@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Search } from "lucide-react"
@@ -44,9 +45,11 @@ export function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity animate-fade-in">
-            <img
+            <Image
               src="/manne.logo.png"
               alt="Manne Tech Logo"
+              width={120}
+              height={48}
               className="h-12 w-auto"
             />
           </Link>

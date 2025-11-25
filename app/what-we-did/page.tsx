@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { WaveDivider } from "@/components/wave-divider"
@@ -154,9 +155,11 @@ export default function WhatWeDid() {
                 <div className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                   {/* Project Image */}
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <Image
                       src={project.image}
                       alt={project.title}
+                      width={800}
+                      height={600}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
